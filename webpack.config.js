@@ -10,7 +10,11 @@ module.exports = {
 
   output: {
       path: path.resolve('./dist/'),
-      filename: "index.js"
+      filename: "index.js",
+      library: 'scrapyard',
+      libraryTarget: 'umd',
+      publicPath: '/dist/',      
+      umdNamedDefine: true 
   },
 
   module: {
@@ -57,5 +61,21 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `styles/[name].css`
     }),
-  ]
+  ],
+
+  externals: {      
+      // Don't bundle react or react-dom      
+      react: {          
+          commonjs: "react",          
+          commonjs2: "react",          
+          amd: "React",          
+          root: "React"      
+      },      
+      "react-dom": {          
+          commonjs: "react-dom",          
+          commonjs2: "react-dom",          
+          amd: "ReactDOM",          
+          root: "ReactDOM"      
+      }  
+  } 
 }
