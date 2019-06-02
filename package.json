@@ -9,7 +9,7 @@
   },
   "author": "Jonathan Stevens",
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "prop-types": "~15.7.2",
     "react": "^16.x",
     "react-dom": "^16.x"
