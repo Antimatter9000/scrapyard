@@ -1,5 +1,5 @@
 export default function retone(colour, amount) {
-    const regex = new RegExp('#[a-fA-F0-9]{6}');
+    const regex = new RegExp('#[a-f0-9]{6}', 'i');
     if (!regex.test(colour)) throw new Error('Colour should have format of # + 6 characters');
 
     let [ r, g, b ] = colour.match(/[a-f0-9]{2}/gi);
