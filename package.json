@@ -1,8 +1,9 @@
 {
-  "name": "scrapyard",
+  "name": "@jsjs/scrapyard",
   "version": "1.0.0",
   "description": "Bits and bobs that can be used elsewhere",
   "main": "dist/index.js",
+  "repository": "github.com:Antimatter9000/scrapyard.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
